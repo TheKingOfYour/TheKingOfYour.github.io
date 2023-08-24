@@ -106,7 +106,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/21/md%E6%95%99%E7%A8%8B/" data-id="cllkot67b0003xoub7ivrb0d9" data-title="Markdown 语法和 MWeb 写作使用说明" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/08/21/md%E6%95%99%E7%A8%8B/" data-id="cllkodghv0002g7ub0zw30qao" data-title="Markdown 语法和 MWeb 写作使用说明" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -126,6 +126,10 @@
   <time class="dt-published" datetime="2023-08-21T09:02:00.000Z" itemprop="datePublished">2023-08-21</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java%E5%AD%A6%E4%B9%A0/">Java学习</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -134,7 +138,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/08/21/hello-world/">Hello World lisen</a>
+      <a class="p-name article-title" href="/2023/08/21/hello-world/">日常问题解决-mysql</a>
     </h1>
   
 
@@ -142,18 +146,21 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><h3 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">内容1</span><br></pre></td></tr></table></figure>
-<h3 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">内容2</span><br></pre></td></tr></table></figure>
-<h3 id="标题3"><a href="#标题3" class="headerlink" title="标题3"></a>标题3</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">内容3</span><br></pre></td></tr></table></figure>
-
+        <h2 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h2><h3 id="新增字段"><a href="#新增字段" class="headerlink" title="新增字段"></a>新增字段</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 ADD 字段名 VARCHAR(40) NOT NULL COMMENT <span class="string">&#x27;字段描述&#x27;</span></span><br><span class="line"></span><br><span class="line">ALTER TABLE 表名 ADD 字段名 <span class="built_in">date</span> DEFAULT NULL COMMENT <span class="string">&#x27;字段描述&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="修改字段长度"><a href="#修改字段长度" class="headerlink" title="修改字段长度"></a>修改字段长度</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 MODIFY COLUMN 字段名 decimal(14,4)</span><br></pre></td></tr></table></figure>
+<h3 id="修改默认值"><a href="#修改默认值" class="headerlink" title="修改默认值"></a>修改默认值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">   alter table 表名 alter column 字段名 drop default; (若本身存在默认值，则先删除)</span><br><span class="line">alter table 表名 alter column 字段名 <span class="built_in">set</span> default 默认值;(若本身不存在则可以直接设定)</span><br></pre></td></tr></table></figure>
+<h3 id="修改字段名称"><a href="#修改字段名称" class="headerlink" title="修改字段名称"></a>修改字段名称</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名 CHANGE 旧字段名 新字段名 新数据类型;</span><br></pre></td></tr></table></figure>
+<h3 id="设置表编码格式"><a href="#设置表编码格式" class="headerlink" title="设置表编码格式"></a>设置表编码格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE  表名  CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;</span><br></pre></td></tr></table></figure>
+<p>** 注意：设置表编码后，已存在的字段并不会改变需要单独设置 **</p>
+<h3 id="设置字段编码格式"><a href="#设置字段编码格式" class="headerlink" title="设置字段编码格式"></a>设置字段编码格式</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 表名  MODIFY COLUMN 字段名 LONGTEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/21/hello-world/" data-id="cllkot6760000xoubbsov013b" data-title="Hello World lisen" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/08/21/hello-world/" data-id="cllkodght0001g7ub7pvpbsri" data-title="日常问题解决-mysql" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E6%95%99%E7%A8%8B/" rel="tag">Java教程</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" rel="tag">日常问题解决</a></li></ul>
 
     </footer>
   </div>
@@ -170,13 +177,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java%E5%AD%A6%E4%B9%A0/">Java学习</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E6%95%99%E7%A8%8B/" rel="tag">Java教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/md%E6%95%99%E7%A8%8B/" rel="tag">md教程</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/md%E6%95%99%E7%A8%8B/" rel="tag">md教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" rel="tag">日常问题解决</a></li></ul>
     </div>
   </div>
 
@@ -186,7 +200,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Java%E6%95%99%E7%A8%8B/" style="font-size: 10px;">Java教程</a> <a href="/tags/md%E6%95%99%E7%A8%8B/" style="font-size: 10px;">md教程</a>
+      <a href="/tags/md%E6%95%99%E7%A8%8B/" style="font-size: 10px;">md教程</a> <a href="/tags/%E6%97%A5%E5%B8%B8%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">日常问题解决</a>
     </div>
   </div>
 
@@ -212,7 +226,7 @@
           </li>
         
           <li>
-            <a href="/2023/08/21/hello-world/">Hello World lisen</a>
+            <a href="/2023/08/21/hello-world/">日常问题解决-mysql</a>
           </li>
         
       </ul>
